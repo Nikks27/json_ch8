@@ -16,16 +16,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        // ChangeNotifierProvider(create: (context) => HomeProvider(),),
-        // ChangeNotifierProvider(create: (context) => HomeProvider(),),
-        ChangeNotifierProvider(create: (context) => UserProvider(),)
+
+
+        ChangeNotifierProvider(create: (context) => UserProvider(),),
       ],
       builder: (context, child) =>  MaterialApp(
         debugShowCheckedModeBanner: false,
         routes:
         {
           '/' : (context) => UserPage(),
-          '/home' :(context) => HomePage(),
+
         },
       ),
     );
