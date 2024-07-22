@@ -6,15 +6,15 @@ import 'package:flutter/services.dart';
 
 import '../Modal/JsonModal.dart';
 
-class TodoProvider extends ChangeNotifier
+class userProvider extends ChangeNotifier
 {
-  List <Todo> TodoList =[];
+  List<UserModal> UserList = [];
 
-  Future  JsonParsing()
-  async {
-    String Json = await rootBundle.loadString('');
-
-    var Todo = jsonDecode();
-
+  Future <void> jsonParsing()
+  async{
+    String = await rootBundle.loadString('');
+    List Users = jsonDecode(json);
+    UserList = users.map((e))=> UserModal.fromjson(e),).toList();
+notifyListeners();
   }
 }
