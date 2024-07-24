@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:json_ch8/Bhagwat%20geeta/screen/view/slockscreen.dart';
 import 'package:provider/provider.dart';
-import '8.1 What is JSON & JSON Parsing/Screens/View/JsonView.dart';
+import 'Bhagwat geeta/screen/provider/geetaprovider.dart';
+import 'Bhagwat geeta/screen/view/geeta_screen.dart';
 import 'Json Parsing 2/Screen/Provider/JsonParsingProvider.dar.dart';
 import 'Json Parsing 2/Screen/View/JsonParsing2View.dart';
 
@@ -19,12 +21,14 @@ class MyApp extends StatelessWidget {
 
 
         ChangeNotifierProvider(create: (context) => UserProvider(),),
+        ChangeNotifierProvider(create: (context) => GeetaProvider(),),
       ],
       builder: (context, child) =>  MaterialApp(
         debugShowCheckedModeBanner: false,
         routes:
-        {
-          '/' : (context) => UserPage(),
+            {
+          '/' : (context) => const geetapage(),
+           '/user' : (context) => slockscreen(),
 
         },
       ),
