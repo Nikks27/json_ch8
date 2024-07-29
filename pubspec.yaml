@@ -88,6 +88,7 @@ flutter:
     - assets/images/image13.jpg
     - assets/images/image14.jpg
     - assets/images/image15.jpg
+    - assets/json/8.3_json.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
