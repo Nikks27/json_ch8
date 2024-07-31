@@ -1,24 +1,22 @@
-class PixabayModal
+class SearchModal
 {
-  late List http;
+  late List<Hit> hits = [];
 
-  PixabayModal({required this.http});
+  SearchModal({required this.hits});
 
-  factory PixabayModal.fromjson(Map m1)
+  factory SearchModal.fromJson(Map m1)
   {
-    return PixabayModal(http: m1['']);
+    return SearchModal(hits: (m1['hits'] as List).map((e) => Hit.fromJson(e),).toList());
   }
 }
-
 class Hit
 {
-  late String web;
+  late String webformatURL;
 
-  Hit({required this.web});
+  Hit({required this.webformatURL});
 
-  factory Hit.fromjson(Map m1)
+  factory Hit.fromJson(Map m1)
   {
-    return Hit(web: m1['']);
+    return Hit(webformatURL: m1['webformatURL']);
   }
-
 }
