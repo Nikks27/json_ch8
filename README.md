@@ -33,6 +33,18 @@
 https://github.com/user-attachments/assets/0df0ef5a-57bf-40dd-8065-aab9e1065e8a
 
 
+</div>
+
+
+# Call Pixabay API & Represent in UI.
+
+<h1 align="center"> 1.Call Pixabay API & Represent in UI.</h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/user-attachments/assets/1067070b-67ec-43db-afe3-58f67c5d4e4e" height ="550">
 
 
 
