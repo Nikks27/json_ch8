@@ -10,7 +10,9 @@ import 'Bhagwat geeta/screen/view/SplashScreen.dart';
 import 'Bhagwat geeta/screen/view/geeta_screen.dart';
 import 'Bhagwat geeta/screen/view/single_verses.dart';
 import 'Json Parsing 2/Screen/Provider/JsonParsingProvider.dar.dart';
+import 'Pixabay/Screens/Provider/Pixabay_Provider.dart';
 import 'Pixabay/Screens/View/Pixabay_View.dart';
+import 'Recipe_App/Screens/View/HomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,13 +26,13 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => SearchProvider(),
+          create: (context) => HomeProvider(),
         ),
       ],
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) =>  SearchScreen(),
+          '/': (context) =>  HomeScreen(),
         },
       ),
     );
