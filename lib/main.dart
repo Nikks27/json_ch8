@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:json_ch8/Bhagwat%20geeta/screen/provider/Language_Provider.dart';
-import 'package:json_ch8/Bhagwat%20geeta/screen/view/slockscreen.dart';
 import 'package:provider/provider.dart';
-import '8.3_Json Data Parsing/Provider/8.3_Provider.dart';
-import '8.3_Json Data Parsing/View/8.3_View.dart';
-import 'Bhagwat geeta/screen/provider/Details_provider.dart';
-import 'Bhagwat geeta/screen/provider/geetaprovider.dart';
-import 'Bhagwat geeta/screen/view/SplashScreen.dart';
-import 'Bhagwat geeta/screen/view/geeta_screen.dart';
-import 'Bhagwat geeta/screen/view/single_verses.dart';
-import 'Json Parsing 2/Screen/Provider/JsonParsingProvider.dar.dart';
-import 'Pixabay/Screens/Provider/Pixabay_Provider.dart';
-import 'Pixabay/Screens/View/Pixabay_View.dart';
+
+
+import 'Recipe_App/Screens/Provider/Recipe_Provider.dart';
+import 'Recipe_App/Screens/View/DetailsScreen.dart';
 import 'Recipe_App/Screens/View/HomePage.dart';
+import 'Recipe_App/Screens/View/SplashScreen.dart';
 
-void main() {
-  runApp(const MyApp());
+
+void main()
+{
+  runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,14 +19,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => HomeProvider(),
-        ),
+        // ChangeNotifierProvider(create: (context) => HomeProvider(),),
+        ChangeNotifierProvider(create: (context) => RecipesProvider(),)
       ],
-      builder: (context, child) => MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) =>  HomeScreen(),
+          '/' : (context) => SplashScreen(),
+          '/home' : (context) => HomeScreen(),
+          '/detail' : (context) => DetailScreen(),
         },
       ),
     );

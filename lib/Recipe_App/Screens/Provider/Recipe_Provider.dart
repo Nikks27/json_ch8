@@ -1,23 +1,46 @@
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
-class HomeProvider extends ChangeNotifier {
-  RecipeHelper recipeHelper = RecipeHelper();
-  RecipeModal? recipeModal;
+import '../Api_Helper/Api_Helper.dart';
+import '../Modal/Recipe_Modal.dart';
 
-  Future<RecipeModal?> fromApi() async {
-    final data = await recipeHelper.fetchDataFromApi();
-    recipeModal = RecipeModal.fromJson(data);
-    return recipeModal;
+
+class RecipesProvider extends ChangeNotifier
+{
+  RecipesProvider()
+  {
+    fromMap();
   }
-}
+  RecipesModal? recipesModal;
+  int selectIndex = 0;
+  int memberNum = 1;
 
+  void selectedCo()
+  {
+    selectIndex;
+    notifyListeners();
+  }
 
-class DetailRecipeProvider extends ChangeNotifier{
-  int selectedPage = 0;
+  void member(String op)
+  {
+    if(op=='increment')
+    {
+      memberNum++;
+    }else{
+      memberNum--;
+    }
+    notifyListeners();
+    print(memberNum);
+  }
+  Future<void> fromMap()
+  async {
+    ApiHelper apiHelper =ApiHelper();
 
-  void changePage(int value){
-    selectedPage = value;
+    String? data = await apiHelper.fetchApiData();
+    Map json = jsonDecode(data!);
+    recipesModal = RecipesModal.fromJson(json);
     notifyListeners();
   }
 }

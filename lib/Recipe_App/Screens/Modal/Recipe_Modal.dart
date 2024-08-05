@@ -1,74 +1,50 @@
-class RecipeModal {
-  late List<Recipes> recipes;
-  late int total, skip, limit;
+class RecipesModal {
+  late List<RecipesDetail> recipes = [];
 
-  RecipeModal({
-    required this.recipes,
-    required this.total,
-    required this.skip,
-    required this.limit,
-  });
+  RecipesModal({required this.recipes});
 
-  factory RecipeModal.fromJson(Map m1) {
-    return RecipeModal(
-      recipes: (m1['recipes'] as List)
-          .map(
-            (e) => Recipes.fromJson(e),
-      )
-          .toList(),
-      total: m1['total'],
-      skip: m1['skip'],
-      limit: m1['limit'],
-    );
+  factory RecipesModal.fromJson(Map m1)
+  {
+    return RecipesModal(recipes: (m1['recipes'] as List).map((e) => RecipesDetail.fromJson(e),).toList());
   }
 }
 
-class Recipes {
-  late int id,
-      prepTimeMinutes,
-      cookTimeMinutes,
-      servings,
-      caloriesPerServing,
-      userId,
-      reviewCount;
-  late String name, difficulty, cuisine, image;
-  late List ingredients, instructions, tags, mealType;
+class RecipesDetail {
+  late int id, prepTimeMinutes, cookTimeMinutes, reviewCount,caloriesPerServing;
+  late String name, image,cuisine,difficulty;
+  late List tags = [];
+  late List ingredients = [];
+  late List instructions = [];
 
-  Recipes({
-    required this.id,
-    required this.prepTimeMinutes,
-    required this.cookTimeMinutes,
-    required this.servings,
-    required this.caloriesPerServing,
-    required this.userId,
-    required this.reviewCount,
-    required this.name,
-    required this.difficulty,
-    required this.cuisine,
-    required this.image,
-    required this.ingredients,
-    required this.instructions,
-    required this.tags,
-    required this.mealType,
-  });
+  RecipesDetail(
+      {required this.difficulty,
+        required this.id,
+        required this.prepTimeMinutes,
+        required this.cookTimeMinutes,
+        required this.reviewCount,
+        required this.name,
+        required this.image,
+        required this.tags,
+        required this.ingredients,
+        required this.instructions,
+        required this.cuisine,
+        required this.caloriesPerServing,
+      });
 
-  factory Recipes.fromJson(Map m1) {
-    return Recipes(
+  factory RecipesDetail.fromJson(Map m1) {
+    return RecipesDetail(
+      difficulty : m1['difficulty'],
       id: m1['id'],
       prepTimeMinutes: m1['prepTimeMinutes'],
       cookTimeMinutes: m1['cookTimeMinutes'],
-      servings: m1['servings'],
-      caloriesPerServing: m1['caloriesPerServing'],
-      userId: m1['userId'],
       reviewCount: m1['reviewCount'],
       name: m1['name'],
-      difficulty: m1['difficulty'],
-      cuisine: m1['cuisine'],
       image: m1['image'],
+      tags: m1['tags'],
       ingredients: m1['ingredients'],
       instructions: m1['instructions'],
-      tags: m1['tags'],
-      mealType: m1['mealType'],
+      cuisine: m1['cuisine'],
+      caloriesPerServing: m1['caloriesPerServing'],
     );
   }
 }
