@@ -56,3 +56,18 @@ https://github.com/user-attachments/assets/847517d2-6e82-4128-9dc4-e281bad7c10d
 
 
 </div>
+# Call Pixabay API & Represent in UI.
+
+<h1 align="center"> 1.Recepi App </h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/user-attachments/assets/44a722d8-2a91-4349-a7dc-a91a562ac06a" height ="550">
+    <img src = "https://github.com/user-attachments/assets/6e333896-9efd-449b-b216-ac61c6ac466e" height ="550">
+      <img src = "https://github.com/user-attachments/assets/0ef68a57-bb08-415f-b588-fc4d57592a22" height ="550">
+
+https://github.com/user-attachments/assets/c650848d-a46a-4540-a560-cd8751c67e12
+
+</div>
