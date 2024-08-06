@@ -74,6 +74,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/json/geeta.json
+    - assets/images/food logo 2.jpg
+    - assets/images/food logo.jpg
+    - assets/images/food logo 3.jpg
     - assets/images/splashscreen.jpg
     - assets/images/backgroundimage.jpg
     - assets/images/image2.jpg
@@ -91,6 +94,8 @@ flutter:
     - assets/images/image14.jpg
     - assets/images/image15.jpg
     - assets/json/8.3_json.json
+    - assets/images/food logo 4.jpg
+    - assets/images/food_logo_4-removebg-preview.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

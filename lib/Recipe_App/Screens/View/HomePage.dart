@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
             // ),
             Padding(
               padding:
-              const EdgeInsets.only(left: 25.0, right: 25, top: 20),
+              const EdgeInsets.only(left: 25.0, right: 25, top: 7),
               child: Row(
                 children: [
                   Expanded(
@@ -124,7 +124,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: w * 0.018,
+                    width: w * 0.020,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -143,9 +143,9 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: h * 0.02,
-            ),
+            // SizedBox(
+            //   height: h * 0.02,
+            // ),
             // Padding(
             //   padding: const EdgeInsets.only(left: 14.0, right: 14),
             //   child: Row(

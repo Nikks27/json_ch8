@@ -14,14 +14,15 @@ class SplashScreen extends StatelessWidget {
     } );
     return Scaffold(
         body:Center(
+
           child: Container(
-            height: 200,
-            width: 200,
+            height:400,
+            width: 400,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                        'Assets/images/weather logo 2.png'
+                        'assets/images/food_logo_4-removebg-preview.png'
                     )
                 )
             ),

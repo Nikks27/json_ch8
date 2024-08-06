@@ -111,75 +111,75 @@ class DetailScreen extends StatelessWidget {
             SizedBox(
               height: h * 0.018,
             ),
-            Center(
-              child: Container(
-                height: h * 0.046,
-                width: w * 0.32,
-                decoration: BoxDecoration(
-                  color: Color(0xffF1F1F1),
-                  borderRadius: BorderRadius.circular(23),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: w * 0.02,
-                    ),
-                    Icon(
-                      Icons.supervisor_account,
-                      size: w * 0.06,
-                    ),
-                    Container(
-                      height: h * 0.046,
-                      width: w * 0.24,
-                      decoration: BoxDecoration(
-                          color: Colors.deepOrange,
-                          borderRadius: BorderRadius.circular(23)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              recipesProviderTrue.member('decremnet');
-                            },
-                            child: Icon(
-                              Icons.remove,
-                              size: w * 0.054,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Container(
-                            height: h * 0.042,
-                            width: w * 0.066,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                            ),
-                            alignment: Alignment.center,
-                            child: Text(
-                              recipesProviderTrue.memberNum.toString(),
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: w * 0.046),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              recipesProviderTrue.member('increment');
-                            },
-                            child: Icon(
-                              Icons.add,
-                              size: w * 0.054,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            // Center(
+            //   child: Container(
+            //     height: h * 0.046,
+            //     width: w * 0.32,
+            //     decoration: BoxDecoration(
+            //       color: Color(0xffF1F1F1),
+            //       borderRadius: BorderRadius.circular(23),
+            //     ),
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         SizedBox(
+            //           width: w * 0.02,
+            //         ),
+            //         Icon(
+            //           Icons.supervisor_account,
+            //           size: w * 0.06,
+            //         ),
+            //         // Container(
+            //         //   height: h * 0.046,
+            //         //   width: w * 0.24,
+            //         //   decoration: BoxDecoration(
+            //         //       color: Colors.deepOrange,
+            //         //       borderRadius: BorderRadius.circular(23)),
+            //         //   child: Row(
+            //         //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //         //     children: [
+            //         //       GestureDetector(
+            //         //         onTap: () {
+            //         //           recipesProviderTrue.member('decremnet');
+            //         //         },
+            //         //         child: Icon(
+            //         //           Icons.remove,
+            //         //           size: w * 0.054,
+            //         //           color: Colors.white,
+            //         //         ),
+            //         //       ),
+            //         //       Container(
+            //         //         height: h * 0.042,
+            //         //         width: w * 0.066,
+            //         //         decoration: BoxDecoration(
+            //         //           shape: BoxShape.circle,
+            //         //           color: Colors.white,
+            //         //         ),
+            //         //         alignment: Alignment.center,
+            //         //         child: Text(
+            //         //           recipesProviderTrue.memberNum.toString(),
+            //         //           style: TextStyle(
+            //         //               fontWeight: FontWeight.w500,
+            //         //               fontSize: w * 0.046),
+            //         //         ),
+            //         //       ),
+            //         //       GestureDetector(
+            //         //         onTap: () {
+            //         //           recipesProviderTrue.member('increment');
+            //         //         },
+            //         //         child: Icon(
+            //         //           Icons.add,
+            //         //           size: w * 0.054,
+            //         //           color: Colors.white,
+            //         //         ),
+            //         //       )
+            //         //     ],
+            //         //   ),
+            //         // )
+            //       ],
+            //     ),
+            //   ),
+            // ),
             SizedBox(
               height: h * 0.02,
             ),
